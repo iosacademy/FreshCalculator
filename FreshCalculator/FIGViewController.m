@@ -45,6 +45,19 @@
   [self.calculatorDisplay setText:finalString];
 }
 
+- (IBAction)negativeOrPositiveButtonPressed:(id)sender {
+  NSString *originalString = self.calculatorDisplay.text;
+  
+  if (numberIsNegative) {
+    NSString *newString = [originalString substringWithRange:NSMakeRange(1, [originalString length]-1)];
+    [self.calculatorDisplay setText:newString];
+    numberIsNegative = NO;
+  } else {
+    [self.calculatorDisplay setText:[@"-" stringByAppendingString:originalString]];
+    numberIsNegative = YES;
+  }
+}
+
 #pragma mark - Private Methods
 - (UIStatusBarStyle)preferredStatusBarStyle {
   return UIStatusBarStyleLightContent;

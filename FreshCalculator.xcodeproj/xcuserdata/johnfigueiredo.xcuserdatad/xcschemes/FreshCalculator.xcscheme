@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5C8F50CD18ACAB63007040B0"
-               BuildableName = "FreshCalculator.app"
+               BuildableName = "Fresh.app"
                BlueprintName = "FreshCalculator"
                ReferencedContainer = "container:FreshCalculator.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5C8F50CD18ACAB63007040B0"
-            BuildableName = "FreshCalculator.app"
+            BuildableName = "Fresh.app"
             BlueprintName = "FreshCalculator"
             ReferencedContainer = "container:FreshCalculator.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5C8F50CD18ACAB63007040B0"
-            BuildableName = "FreshCalculator.app"
+            BuildableName = "Fresh.app"
             BlueprintName = "FreshCalculator"
             ReferencedContainer = "container:FreshCalculator.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5C8F50CD18ACAB63007040B0"
-            BuildableName = "FreshCalculator.app"
+            BuildableName = "Fresh.app"
             BlueprintName = "FreshCalculator"
             ReferencedContainer = "container:FreshCalculator.xcodeproj">
          </BuildableReference>

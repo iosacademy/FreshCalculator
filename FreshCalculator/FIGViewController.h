@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 BOOL userIsInTheMiddleOfTypingANumber;
+BOOL numberIsNegative;
 @interface FIGViewController : UIViewController
   @property (weak, nonatomic) IBOutlet UILabel *calculatorDisplay;
 @end

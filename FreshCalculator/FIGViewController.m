@@ -15,27 +15,36 @@
 
 @implementation FIGViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-  [self customizeButtons];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - IBActions
+- (IBAction)digitPressed:(id)sender {
+  NSString *digit = [[sender titleLabel] text];
+  if (userIsInTheMiddleOfTypingANumber) {
+    [self.calculatorDisplay setText:[[self.calculatorDisplay text] stringByAppendingString:digit]];
+  } else {
+    [self.calculatorDisplay setText:digit];
+    userIsInTheMiddleOfTypingANumber = YES;
+  }
+}
+
+- (IBAction)clearButtonPressed:(id)sender {
+  [self.calculatorDisplay setText:@"0"];
+}
+
+- (IBAction)percentButtonPressed:(id)sender {
+  NSString *string = self.calculatorDisplay.text;
+  float number = [string floatValue];
+  float percent = number/100.f;
+  NSString *finalString = [[NSNumber numberWithFloat:percent] stringValue];
+  [self.calculatorDisplay setText:finalString];
 }
 
 #pragma mark - Private Methods
-- (void)customizeButtons {
-  for (UILabel *label in self.buttonCollection) {
-//    CALayer * layer = [label layer];
-//    [layer setMasksToBounds:YES];
-//    [layer setCornerRadius:0.0]; //when radius is 0, the border is a rectangle
-//    [layer setBorderWidth:1.0];
-//    [layer setBorderColor:[[UIColor blackColor] CGColor]];
-  }
+- (UIStatusBarStyle)preferredStatusBarStyle {
+  return UIStatusBarStyleLightContent;
 }
 
 @end

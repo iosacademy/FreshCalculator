@@ -36,7 +36,7 @@
 
 /* Begin PBXFileReference section */
 		0FD5AD6AB2454B6BAA55A5BD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		5C8F50CE18ACAB63007040B0 /* FreshCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C8F50CE18ACAB63007040B0 /* Fresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8F50D118ACAB63007040B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5C8F50D318ACAB63007040B0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5C8F50D518ACAB63007040B0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -86,6 +86,8 @@
 		5C8F50C518ACAB63007040B0 = {
 			isa = PBXGroup;
 			children = (
+				5C8F510718AD3FF3007040B0 /* Resources */,
+				5C8F510618AD3FCD007040B0 /* Classes */,
 				5C8F50D718ACAB63007040B0 /* FreshCalculator */,
 				5C8F50F618ACAB63007040B0 /* FreshCalculatorTests */,
 				5C8F50D018ACAB63007040B0 /* Frameworks */,
@@ -97,7 +99,7 @@
 		5C8F50CF18ACAB63007040B0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5C8F50CE18ACAB63007040B0 /* FreshCalculator.app */,
+				5C8F50CE18ACAB63007040B0 /* Fresh.app */,
 				5C8F50EF18ACAB63007040B0 /* FreshCalculatorTests.xctest */,
 			);
 			name = Products;
@@ -118,13 +120,6 @@
 		5C8F50D718ACAB63007040B0 /* FreshCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				5C8F50E018ACAB63007040B0 /* FIGAppDelegate.h */,
-				5C8F50E118ACAB63007040B0 /* FIGAppDelegate.m */,
-				5C8F50E318ACAB63007040B0 /* Main.storyboard */,
-				5C8F50E618ACAB63007040B0 /* FIGViewController.h */,
-				5C8F50E718ACAB63007040B0 /* FIGViewController.m */,
-				5C8F50E918ACAB63007040B0 /* Images.xcassets */,
-				5C8F50D818ACAB63007040B0 /* Supporting Files */,
 			);
 			path = FreshCalculator;
 			sourceTree = "<group>";
@@ -158,6 +153,53 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5C8F510618AD3FCD007040B0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5C8F510818AD400F007040B0 /* Application */,
+				5C8F50D818ACAB63007040B0 /* Supporting Files */,
+				5C8F510918AD4027007040B0 /* View Controllers */,
+				5C8F510B18AD4053007040B0 /* Views */,
+			);
+			name = Classes;
+			path = FreshCalculator;
+			sourceTree = "<group>";
+		};
+		5C8F510718AD3FF3007040B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5C8F50E918ACAB63007040B0 /* Images.xcassets */,
+			);
+			name = Resources;
+			path = FreshCalculator;
+			sourceTree = "<group>";
+		};
+		5C8F510818AD400F007040B0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5C8F50E018ACAB63007040B0 /* FIGAppDelegate.h */,
+				5C8F50E118ACAB63007040B0 /* FIGAppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		5C8F510918AD4027007040B0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C8F50E618ACAB63007040B0 /* FIGViewController.h */,
+				5C8F50E718ACAB63007040B0 /* FIGViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5C8F510B18AD4053007040B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5C8F50E318ACAB63007040B0 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,7 +219,7 @@
 			);
 			name = FreshCalculator;
 			productName = FreshCalculator;
-			productReference = 5C8F50CE18ACAB63007040B0 /* FreshCalculator.app */;
+			productReference = 5C8F50CE18ACAB63007040B0 /* Fresh.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5C8F50EE18ACAB63007040B0 /* FreshCalculatorTests */ = {
@@ -424,7 +466,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FreshCalculator/FreshCalculator-Prefix.pch";
 				INFOPLIST_FILE = "FreshCalculator/FreshCalculator-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Fresh;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -438,7 +480,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FreshCalculator/FreshCalculator-Prefix.pch";
 				INFOPLIST_FILE = "FreshCalculator/FreshCalculator-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Fresh;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+BOOL userIsInTheMiddleOfTypingANumber;
 @interface FIGViewController : UIViewController
-
+  @property (weak, nonatomic) IBOutlet UILabel *calculatorDisplay;
 @end

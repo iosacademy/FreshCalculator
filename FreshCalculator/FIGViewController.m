@@ -52,7 +52,7 @@
     NSString *newString = [originalString substringWithRange:NSMakeRange(1, [originalString length]-1)];
     [self.calculatorDisplay setText:newString];
     numberIsNegative = NO;
-  } else {
+  } else if (![originalString isEqualToString:@"0"]) {
     [self.calculatorDisplay setText:[@"-" stringByAppendingString:originalString]];
     numberIsNegative = YES;
   }

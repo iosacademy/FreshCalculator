@@ -22,7 +22,10 @@
 #pragma mark - IBActions
 - (IBAction)digitPressed:(id)sender {
   NSString *digit = [[sender titleLabel] text];
-  if (userIsInTheMiddleOfTypingANumber) {
+  if ([self.calculatorDisplay.text isEqualToString: @"0"]) {
+    [self.calculatorDisplay setText:digit];
+    userIsInTheMiddleOfTypingANumber = YES;
+  } else if (userIsInTheMiddleOfTypingANumber) {
     [self.calculatorDisplay setText:[[self.calculatorDisplay text] stringByAppendingString:digit]];
   } else {
     [self.calculatorDisplay setText:digit];

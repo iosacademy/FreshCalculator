@@ -21,6 +21,7 @@
 		5C8F50F318ACAB63007040B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8F50D518ACAB63007040B0 /* UIKit.framework */; };
 		5C8F50FB18ACAB63007040B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C8F50F918ACAB63007040B0 /* InfoPlist.strings */; };
 		5C8F50FD18ACAB63007040B0 /* FreshCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F50FC18ACAB63007040B0 /* FreshCalculatorTests.m */; };
+		5CBAE6EF18ADB13C00E7AEAF /* FIGFreshCalculation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBAE6EE18ADB13C00E7AEAF /* FIGFreshCalculation.m */; };
 		BC6EA4560EFC48DAA8FAF31B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2894001F37E450BABFF5404 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		5C8F50F818ACAB63007040B0 /* FreshCalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FreshCalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		5C8F50FA18ACAB63007040B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5C8F50FC18ACAB63007040B0 /* FreshCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreshCalculatorTests.m; sourceTree = "<group>"; };
+		5CBAE6ED18ADB13C00E7AEAF /* FIGFreshCalculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIGFreshCalculation.h; sourceTree = "<group>"; };
+		5CBAE6EE18ADB13C00E7AEAF /* FIGFreshCalculation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIGFreshCalculation.m; sourceTree = "<group>"; };
 		E2894001F37E450BABFF5404 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -156,6 +159,7 @@
 		5C8F510618AD3FCD007040B0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5CBAE6EC18ADB10900E7AEAF /* Models */,
 				5C8F510818AD400F007040B0 /* Application */,
 				5C8F50D818ACAB63007040B0 /* Supporting Files */,
 				5C8F510918AD4027007040B0 /* View Controllers */,
@@ -198,6 +202,15 @@
 				5C8F50E318ACAB63007040B0 /* Main.storyboard */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		5CBAE6EC18ADB10900E7AEAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5CBAE6ED18ADB13C00E7AEAF /* FIGFreshCalculation.h */,
+				5CBAE6EE18ADB13C00E7AEAF /* FIGFreshCalculation.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C8F50DE18ACAB63007040B0 /* main.m in Sources */,
+				5CBAE6EF18ADB13C00E7AEAF /* FIGFreshCalculation.m in Sources */,
 				5C8F50E818ACAB63007040B0 /* FIGViewController.m in Sources */,
 				5C8F50E218ACAB63007040B0 /* FIGAppDelegate.m in Sources */,
 			);

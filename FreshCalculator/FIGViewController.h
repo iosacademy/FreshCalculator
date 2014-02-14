@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FIGFreshCalculation.h"
 
 BOOL userIsInTheMiddleOfTypingANumber;
 BOOL numberIsNegative;
+FIGFreshCalculation *calculation;
+
 @interface FIGViewController : UIViewController
-  @property (weak, nonatomic) IBOutlet UILabel *calculatorDisplay;
+@property (weak, nonatomic) IBOutlet UILabel *calculatorDisplay;
 @end

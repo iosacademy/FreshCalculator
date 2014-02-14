@@ -19,6 +19,13 @@
     [super viewDidLoad];
 }
 
+- (FIGFreshCalculation *)calculation {
+  if (!calculation) {
+    calculation = [[FIGFreshCalculation alloc] init];
+  }
+  return calculation;
+}
+
 #pragma mark - IBActions
 - (IBAction)digitPressed:(id)sender {
   NSString *digit = [[sender titleLabel] text];
@@ -56,6 +63,16 @@
     [self.calculatorDisplay setText:[@"-" stringByAppendingString:originalString]];
     numberIsNegative = YES;
   }
+}
+
+- (IBAction)operationButtonPressed:(id)sender {
+  if (userIsInTheMiddleOfTypingANumber) {
+    [[self calculation] setOperand:[[self.calculatorDisplay text] doubleValue]];
+    userIsInTheMiddleOfTypingANumber = NO;
+  }
+  NSString *operation = [[sender titleLabel] text];
+  double result = [[self calculation] performOperation:operation];
+  [self.calculatorDisplay setText: [NSString stringWithFormat:@"%g", result]];
 }
 
 #pragma mark - Private Methods

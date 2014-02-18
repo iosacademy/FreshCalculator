@@ -16,7 +16,8 @@
 @implementation FIGViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+  [super viewDidLoad];
+  [self setCalculatorDisplay];
 }
 
 - (FIGFreshCalculation *)calculation {
@@ -78,6 +79,12 @@
 #pragma mark - Private Methods
 - (UIStatusBarStyle)preferredStatusBarStyle {
   return UIStatusBarStyleLightContent;
+}
+
+- (void)setCalculatorDisplay {
+  CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+  if (screenSize.height > 480.0f)
+    [self.calculatorDisplay setFont: [UIFont fontWithName:@"HelveticaNeue" size:100.0f]];
 }
 
 @end
